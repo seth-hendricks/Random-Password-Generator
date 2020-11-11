@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <script src="https://kit.fontawesome.com/1415642397.js" crossorigin="anonymous"></script> -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css" />
+    <title>Random Password</title>
+  </head>
+  <body>
+
+
+    <div id="app">
+
+      <form id="form__passwordInfo">
+
+        <div class="form__item" id="lengthOfPassword">
+
+          <label for="length">Password Length</label>
+          <input 
+          type="number"
+          id="length"
+          min="1"
+          max="35" />
+
+        </div>
+
+
+        <div class="form__item" id="numbersInPassword">
+
+          <label for="uppercase">Numbers</label>
+          <input type="checkbox" name="numbersInPassword" id="numbers">
+
+        </div>
+
+
+        <div class="form__item" id="symbolsInPassword">
+
+          <label for="symbols">Symbols</label>
+          <input type="checkbox" name="symbolsInPassword" id="symbols">
+
+        </div>
+
+        <div class="form__item" id="lowercaseCharacters">
+
+          <label for="lowercase">Lowercase Letters</label>
+          <input type="checkbox" name="lowercaseCharacters" id="lowercase">
+
+        </div>
+
+
+        <div class="form__item" id="uppercaseCharacters">
+
+          <label for="uppercase">Uppercase Letters</label>
+          <input type="checkbox" name="uppercaseCharacters" id="uppercase">
+
+        </div>
+
+        <div class="form__item" id="ambiguosCharacters">
+
+          <label for="ambigous">Ambiguous Characters</label>
+          <input type="checkbox" name="ambigousCharactera" id="ambiguous">
+
+        </div>
+
+        <button 
+        type="button"
+        id="generatePassword">Generate Password</button>
+
+      </form>
+
+
+      <div class="password">
+
+        <p>Password Generated: <span id="copy_passwrd">copy</span></p>
+
+        <input 
+        type="text" 
+        name="generatedPasswords" 
+        id="generatedPasswords"
+        readonly>
+
+      </div>
+      
+    </div>
+
+
+
+    <script src="app.js"></script>
+  </body>
+</html>
+
+
+<!-- 
+
+  Questions to ask:
+
+  * Passwrd length  0 - 25
+  * Symbols  !@#$%^&*
+  * Lower case  asiukfbdsa
+  * Upper case DHNJOFHO
+  * Ambiguos characters ()[]{}\|;:''""`~,.<>/?
+
+ -->
